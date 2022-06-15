@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>KG Platform</h2>
+        <ul>
+            <li><a href="KG.html"><i class="fas fa-home"></i>Create Graph</a></li>
+            <li class="active"><a href="CheckRelation.html"><i class="fas fa-user"></i>Check Relations</a></li>
+            <li><a href="AskQuestion.html"><i class="fas fa-address-card"></i>Ask Questions</a></li>
+            <li><a href="FindPattern.html"><i class="fas fa-search"></i>Find Pattern</a></li>
+            <li><a href="AddPattern.html"><i class="fas fa-plus-square"></i>Add Pattern</a></li>
+        </ul>
+    </div>
+
+    <div class="main_content">
+        <div class="info">
+            <div id="feedback-form">
+                <h2 class="header">Check Ingested Relations</h2>
+                <div>
+                    <form>
+                        <input type="text" name="taskId" id="taskId" placeholder="Enter Task Id">
+                        <div id="inProgressButton"></div>
+                        <div id="doneButton"></div>
+                        <button type="button" onclick="getTaskStatus(document.getElementById('taskId').value);">Check
+                            Task Status
+                        </button>
+                        <div id="checkSampleRelationButton"></div>
+                    </form>
+                    <br>
+                    <div id="personinfo"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

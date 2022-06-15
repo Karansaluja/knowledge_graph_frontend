@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>KG Platform</h2>
+        <ul>
+            <li class="active"><a href="KG.html"><i class="fas fa-home"></i>Create Graph</a></li>
+            <li><a href="CheckRelation.html"><i class="fas fa-user"></i>Check Relations</a></li>
+            <li><a href="AskQuestion.html"><i class="fas fa-address-card"></i>Ask Questions</a></li>
+            <li><a href="FindPattern.html"><i class="fas fa-search"></i>Find Pattern</a></li>
+            <li><a href="AddPattern.html"><i class="fas fa-plus-square"></i>Add Pattern</a></li>
+        </ul>
+    </div>
+    <div class="main_content">
+        <div class="info">
+            <div id="feedback-form">
+                <h2 class="header">Create Graph</h2>
+                <div>
+                    <form>
+                        <input id="graphName" type="text" name="graphName" placeholder="Graph Name (optional)">
+                        <label for="inputType">Select Input Type : </label>
+                        <select name="inputType" id="inputType">
+                            <option value="textBox">Text</option>
+                            <option value="s3File">S3 File Path</option>
+                            <option value="s3Folder">S3 Folder Path</option>
+                        </select>
+                        <label for="kgData"></label><textarea id="kgData" name="kgData" rows="4" cols="50"
+                                                              placeholder="Please Enter the data"></textarea>
+
+                        <button type="button"
+                                onclick="createGraph(document.getElementById('graphName').value,
+                                document.getElementById('inputType').value, document.getElementById('kgData').value)">
+                            Create Graph
+                        </button>
+                    </form>
+                    <br>
+                    <label style="align-content: center">Your Task has been created with Task Id : </label>
+                    <div id="taskId"></div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
